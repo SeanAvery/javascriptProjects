@@ -21,3 +21,11 @@ for (var i = 0; i < 26; i++) {
 console.log(buf4.toString('ascii'));
 console.log(buf4.toString('ascii', 0, 5));
 console.log(buf4.toString('utf-8'));
+
+// convert buffer to json
+var buf5 = new Buffer({"type":"Buffer","data":[116,101,115,116]});
+
+var json = JSON.stringify(buf5);
+
+console.log(json);
+// var bufJson = buf5.toJSON()
