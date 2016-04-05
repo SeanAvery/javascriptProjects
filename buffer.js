@@ -25,7 +25,23 @@ console.log(buf4.toString('utf-8'));
 // convert buffer to json
 var buf5 = new Buffer({"type":"Buffer","data":[116,101,115,116]});
 
+// use stringify function implicityly calls buf.JSON
 var json = JSON.stringify(buf5);
 
+// print results
 console.log(json);
-// var bufJson = buf5.toJSON()
+
+var result = buf5.compare(buf4);
+console.log(result);
+
+// copy one buffer to another
+var buf6 = new Buffer('ABC');
+
+var buf7 = new Buffer(3);
+
+buf6.copy(buf7);
+console.log(buf7.toString());
+
+
+
+
