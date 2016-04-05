@@ -32,3 +32,12 @@ eventEmitter.emit('connection');
 // check num of listeners
 var numEventListeners = require('events').EventEmitter.listenerCount(eventEmitter, 'connection');
 console.log(numEventListeners + " Listeners listening to connection event this time");
+
+// remove all listeners
+eventEmitter.removeAllListeners('connection');
+
+eventEmitter.emit('connection');
+
+
+var numEventListeners = require('events').EventEmitter.listenerCount(eventEmitter, 'connection');
+console.log(numEventListeners + " Listeners listening to connection event this time");
