@@ -43,3 +43,31 @@ fs.readFile('message.txt', function(err, data){
 	}
 	console.log(data.toString());
 });
+
+// close a file
+
+// fs.close('input.txt', 'r+', function(err, data){
+// 	if (err) {
+// 		return console.log(err);
+// });
+// 	}
+// 	console.log("input.txt is closed");
+
+// get file name
+console.log(__filename);
+// get directory name
+console.log(__dirname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
