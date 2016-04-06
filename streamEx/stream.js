@@ -23,4 +23,20 @@ readStream.on('error', function(){
 	console.log(err.stack);
 });
 
+//writing to a stream
+var data2 = 'this info should go to output.txt';
+
+var writeStream = fs.createWriteStream('output.txt');
+
+writeStream.write(data2, 'utf-8');
+
+writeStream.end();
+
+writeStream.on('finish', function() {
+	console.log("writing complete");
+});
+
+writeStream.on('error', function(err) {
+	console.log(err.stack);
+});
 
