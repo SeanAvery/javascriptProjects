@@ -21,6 +21,8 @@ app.get('/process_get', function(req, res){
 
 	};
 	console.log(response);
+	// print results on page
+	res.end(JSON.stringify(response));
 })
 var server = app.listen('3000', function() {
 	var host = server.address().address;
